@@ -1,0 +1,104 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    body{
+      display: flex;
+      justify-content: center;
+      padding: 5vw;
+      background-color: #edf;
+      
+    }
+    
+    .grid-holder{
+        width:720px;
+        height:720px;
+        border: 2px solid gray;
+        box-shadow: 1px;
+        display:flex;
+        flex-flow: row wrap;
+    }
+    
+    .permahover{
+      background-color: red;
+    }
+    
+    .input-holder{
+      display:flex;
+      flex-flow: column;
+      gap: 40px;
+      margin-right:80px;
+    }
+    
+    
+    
+    .gridCell{
+      background-color: #fff;
+    }
+    .input-holder label, p{
+      margin-left: 15px;
+      color: #88f;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    p{
+        text-align: center;
+        color: #2e854f;
+    }
+    .input-btn{
+      width:60px;
+     border-radius:5px;
+     background-color: #fff;
+     border: 2px solid #fde;
+    }
+    
+    .input-btn:active{
+     border: 2px solid rgb(50, 89, 175);
+    }
+    
+    
+   /* .input-holder div{
+      
+    }*/
+    
+    .name{
+     margin-bottom: 80px; 
+     color: #f44;
+     font-weight: 700;
+     font-size: 32px;
+     font-style: italic;
+     font-family: Palatino;
+    }
+    
+    #owncolor{
+     width:60px;
+     border: 2px solid #fcc;
+     border-radius: 5px;
+    }
+
+    .slider {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 260px; /* Full-width */
+        height: 15px; /* Specified height */
+        background: #3dad68; /* Grey background */
+        outline: 2px solid #2e854f; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+        border-radius: 5px;
+      }
+
+      /* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  .removePadding:first-child{
+    padding: 0;
+    margin: 0;
+  }
+  
+.input-btn:hover{
+    background-color: rgb(209, 96, 158);
+}
