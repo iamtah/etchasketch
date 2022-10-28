@@ -61,33 +61,59 @@ slider.addEventListener("change", sliderCreate);
 
 
 let color = "black";
+
+
 function listendivs(){
+
+let = isClick =false;
+gridHolder.addEventListener("click", function(){
+  isClick = true;
+})
+if(isClick){
+
 divs.forEach(div => {
-        div.addEventListener('click', function() {
+        div.addEventListener('mouseover', function() {    
         div.style.backgroundColor = `${color}`;
-})});}
+      }
+      
+      )})}
+  
+      gridHolder.addEventListener("mouseup", function(){
+        divs.forEach(div => {
+          div.removeEventListener('mouseover', () => isClick = false)    
+          
+        })
+        
+      })
+}
 listendivs();
 
 
 
 EraserButton.addEventListener("click", () => color ="white");
 
-colorpicker.addEventListener("change", function(){ color = colorpicker.value,
-listendivs();
+colorpicker.addEventListener("change", function(){ color = colorpicker.value;
 }
 );
 
 const randColor = () =>  {
   return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
-let isRainbow = false;
-rainbowButton.addEventListener("click", function(){
-  isRainbow = true;
-  iamstupid();
-})
 
-function iamstupid(){
-while(isRainbow){
-color = randColor();
-listendivs();
-}}
+rainbowButton.addEventListener("click",function(){
+isRainbow ? isRainbow =false : isRainbow = true;
+});
+
+// if(isRainbow){
+  
+// }
+
+
+// let DivClicked = false;
+// function isDivClicked(){
+// DivClicked ? DivClicked =false : DivClicked=true;
+// }
+
+
+
+// gridHolder.addEventListener("drag",)
