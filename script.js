@@ -5,7 +5,7 @@ let body = document.querySelector("body");
 body.appendChild(gridHolder);
 
 var slider = document.getElementById("myRange");
-
+let isRainbow = false;
 var output = document.getElementById("sliderOut");
 
 const colorpicker = document.getElementById("owncolor");
@@ -65,32 +65,19 @@ let color = "black";
 
 function listendivs(){
 
-let = isClick =false;
-gridHolder.addEventListener("click", function(){
-  isClick = true;
-})
-if(isClick){
-
 divs.forEach(div => {
         div.addEventListener('mouseover', function() {    
         div.style.backgroundColor = `${color}`;
       }
       
-      )})}
-  
-      gridHolder.addEventListener("mouseup", function(){
-        divs.forEach(div => {
-          div.removeEventListener('mouseover', () => isClick = false)    
-          
-        })
-        
-      })
-}
+      )})} 
+    
 listendivs();
 
 
 
-EraserButton.addEventListener("click", () => color ="white");
+EraserButton.addEventListener("click", () => {isRainbow=false 
+color = "white"});
 
 colorpicker.addEventListener("change", function(){ color = colorpicker.value;
 }
@@ -100,8 +87,17 @@ const randColor = () =>  {
   return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
 }
 
+
+
 rainbowButton.addEventListener("click",function(){
-isRainbow ? isRainbow =false : isRainbow = true;
+isRainbow ? isRainbow =false : isRainbow = true
+divs.forEach(div => {
+  div.addEventListener('mouseenter', () =>{
+  if(isRainbow){
+   color = randColor();
+  }})    
+    
+  });
 });
 
 // if(isRainbow){
