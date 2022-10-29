@@ -12,7 +12,7 @@ const colorpicker = document.getElementById("owncolor");
 let divs = document.querySelectorAll(".gridCell");
 const EraserButton = document.getElementById("Eraser");
 const rainbowButton = document.getElementById("rainbow");
-
+const clearButton = document.getElementById("Clear");
 
 
 function createGrid(){
@@ -100,16 +100,4 @@ divs.forEach(div => {
   });
 });
 
-// if(isRainbow){
-  
-// }
-
-
-// let DivClicked = false;
-// function isDivClicked(){
-// DivClicked ? DivClicked =false : DivClicked=true;
-// }
-
-
-
-// gridHolder.addEventListener("drag",)
+clearButton.onclick = () => sliderCreate();
